@@ -2,6 +2,7 @@ package com.holamundo.HolaMundo.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -23,5 +24,13 @@ public class HelloController {
     @GetMapping("/bye")
     public String sayBye(){
         return "Chau, nos vemos";
+    }
+    
+    @GetMapping("/morehi")
+    public String moreHi(@RequestParam String name,
+                         @RequestParam int age,
+                         @RequestParam String profession         
+                         ){
+        return "Otra vez te saludo " + name + ". Tenés " + age + " años y sos " + profession ;
     }
 }
