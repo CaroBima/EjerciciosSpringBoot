@@ -42,7 +42,15 @@ public class ImcController {
     public String imcCalc(@RequestParam double altura,
                           @RequestParam double peso){
     
-    double imc = peso / (altura*altura);    
-    return String.format("%.2f", imc);
+    double imc = peso / (altura*altura);   
+      if(imc>0 && imc<18.6){
+            return "Peso insuficiente (1 a 18.5): " + String.format("%.2f", imc);
+        }else if(imc>18.5 && imc<25){
+                 return "Peso normal (18.6 a 24.9): " + String.format("%.2f", imc);
+             }else if(imc>=25 && imc<29.9){
+                 return "Sobrepeso (25 a 29.9): " + String.format("%.2f", imc);
+             }else {
+                 return "Obesidad (30 o +): " + String.format("%.2f", imc);
+             }
     }
 }
