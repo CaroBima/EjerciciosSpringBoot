@@ -1,8 +1,7 @@
-# CursoSpringBoot
-Curso de SpringBoot de Todo Code
+# Curso de SpringBoot de Todo Code
 
 
-* [Ejercicios](#10-days-of-javascript)
+* [Ejercicios](# Ejercicios)
 
 
 
