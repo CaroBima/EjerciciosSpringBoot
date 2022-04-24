@@ -36,4 +36,13 @@ public class ImcController {
         
     }
     
+    //se pasa por parametro altura en cm y peso 
+    // IMC = Peso (kg) / altura (m)2
+    @GetMapping("/calculoimc")
+    public String imcCalc(@RequestParam double altura,
+                          @RequestParam double peso){
+    
+    double imc = peso / (altura*altura);    
+    return String.format("%.2f", imc);
+    }
 }
