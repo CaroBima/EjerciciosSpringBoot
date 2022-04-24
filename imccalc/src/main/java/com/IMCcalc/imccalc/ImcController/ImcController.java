@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ImcController {
     
+    //recibe el imc y devuelve si el peso es insuficiente, normal, sobrepeso u obesidad
     @GetMapping("/imc")
     public String imcRank(@RequestParam double valor){
         if(valor>0 && valor<18.6){
@@ -37,10 +38,15 @@ public class ImcController {
     }
     
     //se pasa por parametro altura en cm y peso 
-    // IMC = Peso (kg) / altura (m)2
+    // formula de cálculo: IMC = Peso (kg) / altura (m)2
     @GetMapping("/calculoimc")
     public String imcCalc(@RequestParam double altura,
                           @RequestParam double peso){
+    
+    //si pasan la altura en cm la convierto a metro
+    if(altura>99){
+        altura = altura/100;
+    }    
     
     double imc = peso / (altura*altura);   
       if(imc>0 && imc<18.6){
