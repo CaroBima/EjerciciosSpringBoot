@@ -1,9 +1,6 @@
 # Curso de SpringBoot de Todo Code
 
 
-* [Ejercicios](# Ejercicios)
-
-
 
 
 # Ejercicios
