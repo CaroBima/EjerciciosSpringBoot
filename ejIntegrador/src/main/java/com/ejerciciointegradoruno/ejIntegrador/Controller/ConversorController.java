@@ -20,12 +20,13 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Caro
  */
+
 @RestController
 public class ConversorController {
     
     @GetMapping("/conversor")
     public String conversorgalones(@RequestParam double galones){
-        double litros = galones *3.78541;
+        double litros = galones * 3.78541;
         return galones + " galones equivalen a " + litros + " litros.";
     }
 }
