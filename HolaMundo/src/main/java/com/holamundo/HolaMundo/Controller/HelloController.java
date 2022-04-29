@@ -1,11 +1,14 @@
 package com.holamundo.HolaMundo.Controller;
 
 import com.holamundo.HolaMundo.model.Cliente;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -40,5 +43,26 @@ public class HelloController {
     @PostMapping("/cliente")
     public void nuevoCliente(@RequestBody Cliente cliente){
         System.out.println("Nombre y apellido del cliente: " + cliente.getNombre() + " " + cliente.getApellido() );
+    }
+    
+    @GetMapping ("/cliente/traer")
+    @ResponseBody
+    public List<Cliente> traerClientes(){
+        List<Cliente> listaClientes = new ArrayList<Cliente>();
+        
+        Cliente cliente1 = new Cliente ();
+        cliente1.setApellido("Perez");
+        cliente1.setNombre("Paula");
+        cliente1.setId(1L);
+        
+        Cliente cliente2 = new Cliente ();
+        cliente2.setApellido("Miguelez");
+        cliente2.setNombre("Laura");
+        cliente2.setId(1L);
+
+        
+        listaClientes.add(cliente1);
+        listaClientes.add(cliente2);
+        return listaClientes;
     }
 }
