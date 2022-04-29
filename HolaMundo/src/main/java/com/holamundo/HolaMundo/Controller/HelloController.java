@@ -3,6 +3,8 @@ package com.holamundo.HolaMundo.Controller;
 import com.holamundo.HolaMundo.model.Cliente;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -64,5 +66,10 @@ public class HelloController {
         listaClientes.add(cliente1);
         listaClientes.add(cliente2);
         return listaClientes;
+    }
+    
+    @GetMapping ("/pruebaresponse")
+    ResponseEntity<String> traerRespuesta(){
+        return new ResponseEntity<>("Mensaje devuelto con Response Entity", HttpStatus.OK);
     }
 }
