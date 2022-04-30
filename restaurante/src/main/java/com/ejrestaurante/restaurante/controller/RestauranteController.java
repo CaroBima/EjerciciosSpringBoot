@@ -33,7 +33,7 @@ public class RestauranteController {
     public Plato mostrarPlato(@RequestParam long idPlato){
         List<Plato> listaPlatos = new ArrayList<Plato>();
         Plato platoconsultado = new Plato();
-        System.out.println("llega aca");
+        
         //cargo los datos en el ArrayList
         listaPlatos.add( new Plato(1, "Milanesa", "Carne empanada con finas hierbas y pan de ayer", 545.25));
         listaPlatos.add( new Plato(2, "Papas fritas", "Papas peladas fritas en aceites esenciales y con fina lluvia de sal", 300.00));
@@ -41,10 +41,10 @@ public class RestauranteController {
         listaPlatos.add( new Plato(4, "Bife de chorizo", "Asau", 950.99));
         listaPlatos.add( new Plato(5, "Asau", "Costillas, chinchulines, matambre y no sigo describiendo porque me da hambre", 1543.24));
         
+        //Recorro el arrayList buscando el numero de opcion pasado desde el front
         for(Plato plato : listaPlatos){
             if(plato.getIdPlato() == idPlato){
                 platoconsultado = plato;
-                System.out.println("llega aca");
             } 
                
         }
