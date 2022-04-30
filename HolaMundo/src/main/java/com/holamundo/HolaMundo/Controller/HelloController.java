@@ -60,11 +60,12 @@ public class HelloController {
         Cliente cliente2 = new Cliente ();
         cliente2.setApellido("Miguelez");
         cliente2.setNombre("Laura");
-        cliente2.setId(1L);
+        cliente2.setId(2L);
 
         
         listaClientes.add(cliente1);
         listaClientes.add(cliente2);
+        listaClientes.add( new Cliente(3L, "Paula", "Albarracin"));
         return listaClientes;
     }
     
@@ -72,4 +73,11 @@ public class HelloController {
     ResponseEntity<String> traerRespuesta(){
         return new ResponseEntity<>("Mensaje devuelto con Response Entity", HttpStatus.OK);
     }
+    
+    @GetMapping ("/pruebaerror")
+    ResponseEntity<String> traerRespError(){
+        return new ResponseEntity<>("Error 404, página no encontrada", HttpStatus.NOT_FOUND);
+    }
+    
+    
 }
