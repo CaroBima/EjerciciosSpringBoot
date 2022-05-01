@@ -47,8 +47,10 @@ completa de pacientes mediante el método GET.
     public List<Paciente> devolverPacientes(){
         List<Paciente> listaPacientes = new ArrayList<Paciente>();
     
-        //listaPacientes.add( new Paciente(1, "23456789", "Marcela", "Perez", new LocalDate("2000-04-03")));
-        
+        listaPacientes.add( new Paciente(1, "33456789", "Marcela", "Perez", LocalDate.of(2000,04,03)));
+        listaPacientes.add( new Paciente(2, "28938654", "Paula", "Dávila", LocalDate.of(1979,01,02)));
+        listaPacientes.add( new Paciente(3, "9658743", "Pedro", "Coral", LocalDate.of(1978,11,12)));
+        listaPacientes.add( new Paciente(4, "40125000", "Daniela", "Romero", LocalDate.of(2015,07,05)));
         
         return listaPacientes; 
     }
