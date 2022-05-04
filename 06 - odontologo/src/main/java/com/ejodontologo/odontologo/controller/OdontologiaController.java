@@ -54,4 +54,15 @@ completa de pacientes mediante el método GET.
         
         return listaPacientes; 
     }
+    
+    
+    /*
+    b) Además, el odontólogo necesita saber sus pacientes que son menores de edad para
+contemplar que los mismos asistan a sus citas acompañados por un mayor. Para ello,
+necesita que la API posea un end-point que al realizar la solicitud GET, devuelva
+únicamente a los pacientes que sean menores de edad. Para realizar el cálculo de
+edad tener en cuenta la fecha de nacimiento de cada paciente y la fecha <<actual>>
+(día en que se esté haciendo la consulta).
+*/
+    
 }
