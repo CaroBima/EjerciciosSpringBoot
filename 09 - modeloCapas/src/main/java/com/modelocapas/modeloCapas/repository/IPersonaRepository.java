@@ -8,5 +8,6 @@ public interface IPersonaRepository {
     
     public void guardarPersona(Persona persona);
     public List traerListaPersonas();
+    public void modificarPersona(Persona persona);
     
 }

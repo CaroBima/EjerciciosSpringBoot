@@ -1,4 +1,4 @@
-
+//metodos para llamar a la base de datos
 package com.modelocapas.modeloCapas.repository;
 
 import com.modelocapas.modeloCapas.model.Persona;
@@ -18,5 +18,10 @@ public class PersonaRepository implements IPersonaRepository {
     public List traerListaPersonas() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    //metodos para llamar a la base de datos
+    
+
+    @Override
+    public void modificarPersona(Persona persona) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
