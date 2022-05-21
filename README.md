@@ -16,6 +16,9 @@
 | 7 | Un odontólogo cuenta con una lista de pacientes. De cada uno de ellos cuenta con los datos: id, dni, nombre, apellido y fecha de nacimiento. <br> a) El odontólogo necesita de una API que se capaz de brindarle el listado completo de sus pacientes. Para esto, desarrollar un end-point que permita devolver la lista completa de pacientes mediante el método GET. <br> b) Además, el odontólogo necesita saber sus pacientes que son menores de edad para contemplar que los mismos asistan a sus citas acompañados por un mayor. Para ello, necesita que la API posea un end-point que al realizar la solicitud GET, devuelva únicamente a los pacientes que sean menores de edad. Para realizar el cálculo de edad tener en cuenta la fecha de nacimiento de cada paciente y la fecha <<actual>> (día en que se esté haciendo la consulta). <br> Tips para fechas: <br> 1- Utilizar el tipo de dato LocalDate. <br> 2- Para obtener la fecha de hoy se utiliza el método LocalDate.now() <br> 3- Para calcular períodos entre dos fechas se utiliza la clase Period y el método between. Por ejemplo: Period.between (fecha_hoy, otra_fecha) <br> 4- Si utilizamos el método getYears en el objeto Period que tengamos, obtendremos la cantidad de años de diferencia.  | [Solución](https://github.com/CaroBima/CursoSpringBoot/tree/master/07%20-%20odontologo)                |
 | 8 | Inmobiliaria: uso de DTO para recuperar datos de una clase inmueble y otra inquilino  | [Solución](https://github.com/CaroBima/CursoSpringBoot/tree/master/08%20-%20inmo)    |
 | 9 | Modelo de capas  | [Solución](https://github.com/CaroBima/CursoSpringBoot/tree/master/09%20-%20modeloCapas)    |
+| 10 | Ejemplo básico de inyección de dependencias con constructor y con setters  | [Solución](https://github.com/CaroBima/CursoSpringBoot/tree/master/10%20-%20InyeccionDependenciasConstructor)    |
 
-
+  
+  
+  
 
