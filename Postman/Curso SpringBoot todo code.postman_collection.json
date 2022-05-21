@@ -6,6 +6,43 @@
 	},
 	"item": [
 		{
+			"name": "ejercicio 1 - restaurante",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/plato?idPlato=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plato"
+					],
+					"query": [
+						{
+							"key": "idPlato",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "envio de cliente por post usando RequestBody",
 			"request": {
 				"method": "POST",
@@ -28,6 +65,92 @@
 					"port": "8080",
 					"path": [
 						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inmobiliaria dto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/propiedad/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propiedad",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejercicio 2 - odontologo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pacientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pacientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "envio de cliente por post usando RequestBody",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Paula\",\r\n    \"apellido\": \"Perez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autowire",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posteos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posteos"
 					]
 				}
 			},
