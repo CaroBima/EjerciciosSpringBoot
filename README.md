@@ -17,8 +17,7 @@
 | 8 | Inmobiliaria: uso de DTO para recuperar datos de una clase inmueble y otra inquilino  | [Solución](https://github.com/CaroBima/CursoSpringBoot/tree/master/08%20-%20inmo)    |
 | 9 | Modelo de capas  | [Solución](https://github.com/CaroBima/CursoSpringBoot/tree/master/09%20-%20modeloCapas)    |
 | 10 | Ejemplo básico de inyección de dependencias con constructor y con setters  | [Solución](https://github.com/CaroBima/CursoSpringBoot/tree/master/10%20-%20InyeccionDependenciasConstructor)    |
-
-  
+| 11 | Ejemplo básico de uso de @Autowired. Responde a una peticion pasada por get.  | [Solución](https://github.com/CaroBima/CursoSpringBoot/tree/master/11%20-%20Autowired)    |
   
   
 
