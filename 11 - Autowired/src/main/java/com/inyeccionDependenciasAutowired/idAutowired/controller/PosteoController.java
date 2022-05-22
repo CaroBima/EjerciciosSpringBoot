@@ -3,7 +3,7 @@
 package com.inyeccionDependenciasAutowired.idAutowired.controller;
 
 import com.inyeccionDependenciasAutowired.idAutowired.model.Posteo;
-import com.inyeccionDependenciasAutowired.idAutowired.repository.PosteoRepository;
+import com.inyeccionDependenciasAutowired.idAutowired.repository.IPosteoRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PosteoController {
     @Autowired
-    PosteoRepository repository;
+    IPosteoRepository repository;
     
     @GetMapping ("/posteos")
     public List<Posteo> traerTodos(){
