@@ -29,8 +29,7 @@ public class JugadorController {
 //        for (Jugador jug : listaJugadores){
 //            System.out.println("jugador " + jug.getApellido());
 //            System.out.println("jugador " + jug.getEstatura());
-//        }
-        
+//        }     
     }
 
     //endpoint para mostrar el promedio de estatura de los jugadores
@@ -38,11 +37,9 @@ public class JugadorController {
     public double calcularPromedio(){
         int sumatoriaEstaturas = 0;
         
-        
         //recorro el array y hago la sumatoria de estaturas
         for (Jugador jug : listaJugadores){
             sumatoriaEstaturas += jug.getEstatura();
-            
         }
         
         return sumatoriaEstaturas / listaJugadores.size();
