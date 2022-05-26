@@ -3,10 +3,10 @@
 package com.estaturasbasquet.estaturas.controller;
 
 import com.estaturasbasquet.estaturas.model.Jugador;
+import java.util.ArrayList;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,29 +16,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class JugadorController {
     
-    @Autowired
-    List<Jugador> listaJugadores;
+   List<Jugador> listaJugadores = new ArrayList(); 
     
-    @Autowired
-    Jugador jugador;
-    
-    @PostMapping("/agregajugador")
-    public void guardarJugador( @RequestParam Long id,
-                                @RequestParam String dni,
-                                @RequestParam String nombre,
-                                @RequestParam String apellido,
-                                @RequestParam int edad,
-                                @RequestParam double peso,
-                                @RequestParam int estatura){
-        jugador.setId(id);
-        jugador.setDni(dni);
-        jugador.setNombre(nombre);
-        jugador.setApellido(apellido);
-        jugador.setEdad(edad);
-        jugador.setPeso(peso);
-        jugador.setEstatura(estatura);
+    @PostMapping("/nuevo/jugador")
+    public void guardarJugador(@RequestBody Jugador jugador){
         
+        
+        
+        System.out.println("antes del array");       
         listaJugadores.add(jugador);
+        
+        System.out.println("antes del for");       
+        for (Jugador jug : listaJugadores){
+            System.out.println("jugador " + jug.getApellido());
+        }
         
     }
 }
