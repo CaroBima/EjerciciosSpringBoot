@@ -189,6 +189,54 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "13 - Basquet - agregajugador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"2\",\r\n    \"dni\": \"45235123\",\r\n    \"nombre\": \"Anibal\",\r\n    \"apellido\": \"Corrego\",\r\n    \"edad\": \"27\",\r\n    \"peso\": \"78\",\r\n    \"estatura\": \"170\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/nuevo/jugador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nuevo",
+						"jugador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "13 - Basquet - muestra promedio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/promedio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"promedio"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
