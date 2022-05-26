@@ -8,16 +8,28 @@ Para este ejercicio sentite con total libertad de utilizar la forma de pasaje
 de parámetros con la que más cómodo te sientas
 */
 
-package com.areaTriangulo.calculoArea;
+package com.areaTriangulo.calculoArea.model;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import lombok.Getter;
+import lombok.Setter;
 
-@SpringBootApplication
-public class CalculoAreaApplication {
+/**
+ *
+ * @author Caro
+ */
+@Getter
+@Setter
+public class Triangulo {
+    private double base, altura;
 
-	public static void main(String[] args) {
-		SpringApplication.run(CalculoAreaApplication.class, args);
-	}
+    //constructores
+    public Triangulo() {
+    }
 
+    public Triangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+    
+    
 }
