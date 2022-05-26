@@ -197,7 +197,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"2\",\r\n    \"dni\": \"45235123\",\r\n    \"nombre\": \"Anibal\",\r\n    \"apellido\": \"Corrego\",\r\n    \"edad\": \"27\",\r\n    \"peso\": \"78\",\r\n    \"estatura\": \"170\"\r\n}\r\n",
+					"raw": "{\r\n    \"id\": \"2\",\r\n    \"dni\": \"45235123\",\r\n    \"nombre\": \"Anibal\",\r\n    \"apellido\": \"Corrego\",\r\n    \"edad\": \"27\",\r\n    \"peso\": \"78\",\r\n    \"estatura\": \"190\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -233,6 +233,35 @@
 					"port": "8080",
 					"path": [
 						"promedio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "14 - Calculo del área de un triangulo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/calculo?base=10&altura=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculo"
+					],
+					"query": [
+						{
+							"key": "base",
+							"value": "10"
+						},
+						{
+							"key": "altura",
+							"value": "2"
+						}
 					]
 				}
 			},
