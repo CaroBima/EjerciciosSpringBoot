@@ -10,9 +10,10 @@ import java.util.List;
  * @author Caro
  */
 public interface IPersonaService {
-    public List<Persona> verGeneros();
-    public void agregarGenero(Persona idPersona);
-    public boolean borrarGenero(int idPersona);
-    public Persona buscarGenero(int idPersona);
+    public List<Persona> getPersonas();
+    public void savePersona(Persona persona);
+    public void deletePersona(Long idPersona);
+    public Persona findPersona(Long idPersona);
+    public void editPersona(Long idOriginal, Long idNueva, String nuevoNombre, String nuevoApellido, int nuevaEdad);
 
 }
