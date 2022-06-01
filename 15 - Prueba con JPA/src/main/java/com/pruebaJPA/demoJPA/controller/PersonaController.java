@@ -49,13 +49,13 @@ public class PersonaController {
     //endpoint para modificar a una persona
     @PutMapping("/personas/editar/{idOriginal}")
     public Persona editPersona(@PathVariable Long idOriginal,
-                                @RequestParam( required = false, name = "id") Long nuevaId,
-                                @RequestParam( required = false, name = "nombre") String nuevoNombre,
-                                @RequestParam( required = false, name = "apellido") String nuevoApellido,
-                                @RequestParam( required = false, name = "edad") int nuevaEdad){
+                               @RequestParam( required = false, name = "nombre") String nuevoNombre,
+                               @RequestParam( required = false, name = "apellido") String nuevoApellido,
+                               @RequestParam( required = false, name = "edad") Integer nuevaEdad){
     
+       
         //se envia la id original para buscar a la persona a modificar + los nuevos datos
-        interfPersona.editPersona(idOriginal, nuevaId, nuevoNombre, nuevoApellido, nuevaEdad);
+        interfPersona.editPersona(idOriginal, nuevoNombre, nuevoApellido, nuevaEdad);
         System.out.println("llega hasta aca");
         Persona persona = interfPersona.findPersona(idOriginal);
     

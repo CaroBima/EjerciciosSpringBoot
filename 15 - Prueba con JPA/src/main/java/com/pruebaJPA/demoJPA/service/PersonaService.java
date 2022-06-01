@@ -45,9 +45,12 @@ public class PersonaService implements IPersonaService {
 
     //mètodo para editar los datos de una persona
     @Override
-    public void editPersona(Long idOriginal, Long idNueva, String nuevoNombre, String nuevoApellido, int nuevaEdad) {
+    public void editPersona(Long idOriginal, String nuevoNombre, String nuevoApellido, Integer nuevaEdad) {
+        
+       //sout hecho para probar por consola, no llegaba hasta aca porque estaba pasando mal los parametros
+       //System.out.println(idOriginal + " " + idNueva  + " " + nuevoApellido + " " + nuevoNombre  + " " + nuevaEdad);
        Persona persona = this.findPersona(idOriginal);
-       persona.setId(idNueva);
+       //persona.setId(idNueva);
        persona.setApellido(nuevoApellido);
        persona.setNombre(nuevoNombre);
        persona.setEdad(nuevaEdad);
