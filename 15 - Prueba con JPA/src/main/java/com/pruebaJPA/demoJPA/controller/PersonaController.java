@@ -2,7 +2,9 @@ package com.pruebaJPA.demoJPA.controller;
 
 import com.pruebaJPA.demoJPA.model.Persona;
 import com.pruebaJPA.demoJPA.service.IPersonaService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,32 +26,38 @@ public class PersonaController {
     @Autowired
     private IPersonaService interfPersona;
     
+    //devuelve la lista de personas
+    @GetMapping("/personas/traer")
+    public List<Persona> getPersonas(){
+        return interfPersona.getPersonas();
+    }
+    
     //Endpoint que permite agregar a una nueva persona
-    @GetMapping("/personas/crear")
+    @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
         interfPersona.savePersona(persona);
         return "Persona agregada correctamente";
     }
     
     //endpoint para dar de baja a una persona
-    @PostMapping("/personas/borrar/{id}")
+    @DeleteMapping("/personas/borrar/{idPersona}")
     public String deletePersona(@PathVariable Long idPersona){
         interfPersona.deletePersona(idPersona);
         return "La persona ha sido eliminada, kaput";
     }
     
     //endpoint para modificar a una persona
-    @PutMapping("personas/editar/{idAModificar}")
-    public Persona editPersona(@PathVariable Long idOrigina,
+    @PutMapping("/personas/editar/{idOriginal}")
+    public Persona editPersona(@PathVariable Long idOriginal,
                                 @RequestParam( required = false, name = "id") Long nuevaId,
                                 @RequestParam( required = false, name = "nombre") String nuevoNombre,
                                 @RequestParam( required = false, name = "apellido") String nuevoApellido,
                                 @RequestParam( required = false, name = "edad") int nuevaEdad){
     
         //se envia la id original para buscar a la persona a modificar + los nuevos datos
-        interfPersona.editPersona(idOrigina, nuevaId, nuevoNombre, nuevoApellido, nuevaEdad);
-        
-        Persona persona = interfPersona.findPersona(idOrigina);
+        interfPersona.editPersona(idOriginal, nuevaId, nuevoNombre, nuevoApellido, nuevaEdad);
+        System.out.println("llega hasta aca");
+        Persona persona = interfPersona.findPersona(idOriginal);
     
         return persona;
     }
