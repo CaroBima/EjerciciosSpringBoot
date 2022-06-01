@@ -47,14 +47,24 @@ public class PersonaService implements IPersonaService {
     @Override
     public void editPersona(Long idOriginal, String nuevoNombre, String nuevoApellido, Integer nuevaEdad) {
         
-       //sout hecho para probar por consola, no llegaba hasta aca porque estaba pasando mal los parametros
-       //System.out.println(idOriginal + " " + idNueva  + " " + nuevoApellido + " " + nuevoNombre  + " " + nuevaEdad);
-       Persona persona = this.findPersona(idOriginal);
-       //persona.setId(idNueva);
-       persona.setApellido(nuevoApellido);
-       persona.setNombre(nuevoNombre);
-       persona.setEdad(nuevaEdad);
-       
+        //sout hecho para probar por consola, no llegaba hasta aca porque estaba pasando mal los parametros
+        //System.out.println(idOriginal + " " + idNueva  + " " + nuevoApellido + " " + nuevoNombre  + " " + nuevaEdad);
+        Persona persona = this.findPersona(idOriginal);
+        //persona.setId(idNueva); da error al intentar cambiar el id, no se modifica
+        
+        //verifico que se haya pasado este parametro para no guardar un valor null en la bbdd
+        if(nuevoApellido != null){
+           persona.setApellido(nuevoApellido);
+       }
+        
+        if(nuevoNombre != null){
+            persona.setNombre(nuevoNombre);
+        }
+            
+        if(nuevaEdad != null){
+            persona.setEdad(nuevaEdad);
+        }
+        
        this.savePersona(persona);
     }
 }

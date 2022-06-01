@@ -56,7 +56,7 @@ public class PersonaController {
        
         //se envia la id original para buscar a la persona a modificar + los nuevos datos
         interfPersona.editPersona(idOriginal, nuevoNombre, nuevoApellido, nuevaEdad);
-        System.out.println("llega hasta aca");
+        
         Persona persona = interfPersona.findPersona(idOriginal);
     
         return persona;
