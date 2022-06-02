@@ -1,8 +1,9 @@
 
-
 package com.alumno.cursos.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,11 +13,16 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@Entity
 public class Curso {
+    
+    @Id
     private Long id_curso;
     private String nombre;
     private String modalidad;
     private String fecha_finalizacion;
+    
+    @OneToMany
     private Tema listadeTemas;
 
     
@@ -31,6 +37,4 @@ public class Curso {
         this.fecha_finalizacion = fecha_finalizacion;
         this.listadeTemas = listadeTemas;
     }
-    
-    
 }
