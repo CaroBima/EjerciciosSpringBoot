@@ -17,14 +17,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Tema {
-    @Id
+public class Tema implements Serializable {
+   @Id
     private Long id_tema;
     private String nombre;
     private String descripcion;
 
-    @ManyToOne
-    @JoinColumn(name="id_curso")
+//    @ManyToOne
+//    @JoinColumn(name="id_curso")
     private Curso id_curso;
     
     //constructores:
