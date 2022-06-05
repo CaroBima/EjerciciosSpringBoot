@@ -38,6 +38,9 @@ import java.util.List;
 public interface ICursoService {
     public void crearCurso(Curso curso);
     public List<Curso> traerCursos();
+    public void crearCurso();
+    public void modificarCurso(Long idCurso);
+    public void borrarCurso(Long idCurso);
     
     
 }
