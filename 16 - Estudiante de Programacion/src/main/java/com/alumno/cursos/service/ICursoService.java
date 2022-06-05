@@ -36,11 +36,10 @@ import java.util.List;
  * @author Caro
  */
 public interface ICursoService {
-    public void crearCurso(Curso curso);
+    public void guardarCurso(Curso curso);
     public List<Curso> traerCursos();
-    public void crearCurso();
-    public void modificarCurso(Long idCurso);
+    public void modificarCurso(Long idCurso, String nuevoNombre, String nuevaModalidad, String nuevaFechaFin);
     public void borrarCurso(Long idCurso);
-    
+    public Curso encontrarCurso(Long idCurso);
     
 }

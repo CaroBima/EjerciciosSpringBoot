@@ -2,6 +2,7 @@
 package com.alumno.cursos.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -22,7 +23,7 @@ public class Curso implements Serializable {
     private Long id_curso;
     private String nombre;
     private String modalidad;
-    private String fecha_finalizacion;
+    private Date fecha_finalizacion;
     
     @OneToMany
     private List<Tema> listadeTemas;
@@ -32,13 +33,15 @@ public class Curso implements Serializable {
     public Curso() {
     }
 
-    public Curso(Long id_curso, String nombre, String modalidad, String fecha_finalizacion, List<Tema> listadeTemas) {
+    public Curso(Long id_curso, String nombre, String modalidad, Date fecha_finalizacion, List<Tema> listadeTemas) {
         this.id_curso = id_curso;
         this.nombre = nombre;
         this.modalidad = modalidad;
         this.fecha_finalizacion = fecha_finalizacion;
         this.listadeTemas = listadeTemas;
     }
+
+    
 
  
 }
